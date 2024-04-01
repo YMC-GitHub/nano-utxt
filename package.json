@@ -8,7 +8,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@utxt/core": "workspace:*"
+    "@utxt/core": "workspace:*",
+    "@utxt/stro-parse": "workspace:*"
   },
   "scripts": {
     "build": "turbo run build",
