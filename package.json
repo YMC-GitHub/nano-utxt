@@ -1,0 +1,23 @@
+{
+  "name": "@utxt/root",
+  "private": true,
+  "description": "a mono repo for utxt usercase",
+  "keywords": [
+    "nano-utxt",
+    "mono"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@utxt/core": "workspace:*"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run lint",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "test-coverage": "turbo run test-coverage",
+    "lint-fix": "turbo run lint-fix",
+    "fmt-ts": "turbo run fmt-ts",
+    "types": "turbo run types"
+  }
+}
