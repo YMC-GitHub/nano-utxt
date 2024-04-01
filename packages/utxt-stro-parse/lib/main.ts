@@ -263,7 +263,7 @@ export function kvsmFlip(obj: PlainObject) {
 // util for test
 
 export function jsonStroify(
-  input: string | PlainObject,
+  input: string | PlainObject | PlainObject[],
   trimKeyQuotation: boolean = false
 ) {
   let result =
@@ -300,8 +300,10 @@ export function straShuffle(arr: string[]) {
  * ```
  */
 export function stroShuffle(prompt: string | string[], startIndex: number = 2) {
-  const stda: string[] = typeof prompt === "string" ? prompt.split(/ +/) : prompt;
-  const validindex = startIndex > 0 && startIndex < stda.length ? startIndex : 2;
+  const stda: string[] =
+    typeof prompt === "string" ? prompt.split(/ +/) : prompt;
+  const validindex =
+    startIndex > 0 && startIndex < stda.length ? startIndex : 2;
   const tail = stda.slice(validindex);
   const head = stda.slice(0, validindex);
   return [...head, ...straShuffle(tail)].filter((v) => v).join(" ");
